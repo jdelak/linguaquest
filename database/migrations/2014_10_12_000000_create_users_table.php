@@ -24,8 +24,8 @@ class CreateUsersTable extends Migration
             $table->integer('level')->default(1);
             $table->integer('gem')->default(0);
             $table->boolean('premium')->default(0);
-            $table->dateTime('premium_start_date');
-            $table->dateTime('premium_end_date');
+            $table->dateTime('premium_start_date')->nullable();
+            $table->dateTime('premium_end_date')->nullable();
             $table->timestamps();
         });
     }
